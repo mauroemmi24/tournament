@@ -1,0 +1,94 @@
+body{
+    margin: auto;
+    font-family: Arial;
+}
+
+
+.header{
+    padding: 10px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+}
+
+
+.tournament-table {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 3px;
+  }
+  
+  .tournament-table td, .tournament-table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  .tournament-table tr:nth-child(even){
+      background-color: #f2f2f2;
+    }
+  
+  .tournament-table tr:hover {
+      background-color: #ddd;
+    }
+  
+  .tournament-table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #1abc9c;
+    color: white;
+  }
+
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+
+	/* Force table to not be like tables anymore */
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	
+	/* Hide table headers (but not display: none;, for accessibility) */
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	
+	tr { border: 1px solid #ccc; }
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before { 
+		/* Now like a table header */
+		position: right;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+	
+	/*
+	Label the data
+	*/
+	td:nth-of-type(1):before { content: "Posición:"; }
+	td:nth-of-type(2):before { content: "Nombre:"; }
+	td:nth-of-type(3):before { content: "PTS:"; }
+	td:nth-of-type(4):before { content: "PJ:"; }
+    td:nth-of-type(5):before { content: "PG:"; }
+	td:nth-of-type(6):before { content: "PE:"; }
+	td:nth-of-type(7):before { content: "PP:"; }
+	td:nth-of-type(8):before { content: "GF:"; }
+	td:nth-of-type(9):before { content: "GC:"; }
+	td:nth-of-type(10):before { content: "DIF:"; }
+}

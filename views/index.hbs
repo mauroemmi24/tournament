@@ -1,0 +1,41 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <link rel="stylesheet" type="text/css" href="styles.css"/>
+        <title>Torneo Uruguayo</title>
+        
+    </head>
+<body>
+    <header class="header">
+        <h1>Torneo Uruguayo - Clausura 1A 2020</h1>       
+    </header>
+                <table class="tournament-table">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>PTS</th>
+                        <th>PJ</th>
+                        <th>PG</th>
+                        <th>PP</th>
+                        <th>PE</th>
+                        <th>GF</th>
+                        <th>GC</th>
+                        <th>DIF</th>
+                        </tr>   
+                        {{#each Team}}
+                            <tr>
+                                <td>{{name}}</td>
+                                <td>{{pts}}</td>
+                                <td>{{pj}}</td>
+                                <td>{{pg}}</td>
+                                <td>{{pe}}</td>
+                                <td>{{pp}}</td>
+                                <td>{{gf}}</td>
+                                <td>{{gc}}</td>
+                                <td>{{dif}}</td>
+                            </tr>
+                        {{/each}}
+                </table>   
+    <footer class="footer"></footer>
+</body>
+</html>
