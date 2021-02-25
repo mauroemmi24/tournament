@@ -5,8 +5,15 @@ const Team = require('./models/Team');
 
 //Initializations
 const app = express();
-require ('./database');
 
+const mongoose = require('mongoose');
+
+
+mongoose.connect(process.env.MONGODB_URL, {
+    useNewUrlParser: true
+})
+    .then(db => console.log('DB is connected'))
+    .catch(err => console.error(err));
 
 //Settings
 app.use(express.urlencoded({extended: false}));
