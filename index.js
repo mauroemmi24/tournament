@@ -27,19 +27,7 @@ app.use('/', require('./routes/teams'));
 app.use(express.static(path.join(__dirname,'/views')));
 
 
-//Start the server
-const host = process.env.HOST || '0.0.0.0';
-const port = process.env.PORT || 3000;
-
-app.set('port',port);
-
-app.listen(port,host, () => {
-     console.log('El servidor esta funcionando');
-});
 
 
 
-/*app.listen(app.get('port'), () => {
-     console.log('Server on port',app.get('port'));
-})*/
 
