@@ -6,16 +6,7 @@ const Team = require('./models/Team');
 //Initializations
 const app = express();
 
-const mongoose = require('mongoose');
-
-//Conection
-mongoose.Promise=global.Promise;
-mongoose.connect(process.env.MONGODB_URL, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
-    .then(db => console.log('DB is connected'))
-    .catch(err => console.error(err));
+require('./database');
 
 
 app.listen(process.env.PORT || 3000)

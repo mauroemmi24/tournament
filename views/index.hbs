@@ -1,7 +1,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width"/>
+        <meta name="viewport" content="width=device-width, height=device-height"/>
         <link rel="stylesheet" type="text/css" href="styles.css"/>
         <title>Torneo Uruguayo</title>
         
@@ -18,9 +18,9 @@
                         <th>PG</th>
                         <th>PP</th>
                         <th>PE</th>
-                        <th>GF</th>
-                        <th>GC</th>
-                        <th>DIF</th>
+                        <th  class="hide_on_mobile">GF</th>
+                        <th  class="hide_on_mobile">GC</th>
+                        <th  class="hide_on_mobile">DIF</th>
                         </tr>   
                         {{#each Team}}
                             <tr>
@@ -30,9 +30,9 @@
                                 <td>{{pg}}</td>
                                 <td>{{pe}}</td>
                                 <td>{{pp}}</td>
-                                <td>{{gf}}</td>
-                                <td>{{gc}}</td>
-                                <td>{{dif}}</td>
+                                <td class="hide_on_mobile">{{gf}}</td>
+                                <td class="hide_on_mobile">{{gc}}</td>
+                                <td class="hide_on_mobile">{{dif}}</td>
                             </tr>
                         {{/each}}
                 </table>   
