@@ -13,8 +13,5 @@ router.get('/', async (req, res) => {
     const teams = await Team.find();
     res.render('index', {Team: teams});
 })
-    .then(req => console.log('DB is connected'))
-    .catch(err => console.error(err));
-
 
 module.exports = router;
