@@ -17,9 +17,14 @@ mongoose.connect(process.env.MONGODB_URL, {
     .then(db => console.log('DB is connected'))
     .catch(err => console.error(err));
 
+
+app.listen(process.env.PORT || 3000)
+
 //Settings
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
+
+
 
 
 //Routes
