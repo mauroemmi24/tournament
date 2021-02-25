@@ -10,7 +10,7 @@ router.set('views',path.join(__dirname,'../views'))
 router.set('view engine','hbs')
 
 router.get('/', async (req, res) => { 
-    const teams = await Team.find();
+    const teams = await Team.find().sort({'pts': -1 });
     res.render('index', {Team: teams});
 })
 
